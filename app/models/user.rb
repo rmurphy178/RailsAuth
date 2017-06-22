@@ -32,7 +32,7 @@ class User < ActiveRecord::Base
 
   def password=(password)
     @password = password
-    self.password_digest = Brcrypt::Password.create(@password)
+    self.password_digest = Bcrypt::Password.create(@password)
   end
 
 
